@@ -1,0 +1,23 @@
+﻿<Window x:Class="sem_02.Conductores"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sem_02"
+        mc:Ignorable="d"
+        Title="Conductores" Height="450" Width="800">
+    <Grid>
+        <!-- Grid.ColumnSpan="2" Margin="5"-->
+        <DataGrid Name="ConductoresDataGrid" AutoGenerateColumns="False" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Tipo de documento" Binding="{Binding TipoDocumento}"/>
+                <DataGridTextColumn Header="Número de documento" Binding="{Binding NumeroDocumento}"/>
+                <DataGridTextColumn Header="Placa" Binding="{Binding Placa}"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding NombreConductor}"/>
+                <DataGridTextColumn Header="Apellido" Binding="{Binding ApellidoConductor}"/>
+                <DataGridTextColumn Header="Fecha y hora" Binding="{Binding FechaHora}"/>
+                <DataGridTextColumn Header="Peso Ingresado" Binding="{Binding PesoIngreso}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

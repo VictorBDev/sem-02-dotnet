@@ -1,0 +1,70 @@
+﻿<Window x:Class="sem_02.Registro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sem_02"
+        mc:Ignorable="d"
+        Title="Registro" Height="500" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="218*" />
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Etiqueta y campo para el documento -->
+        <TextBlock Text="Tipo de Documento" Grid.Column="0" Margin="5,0,5,0" VerticalAlignment="Center"/>
+        <ComboBox Name="TipoComboBox" Text="Elija" Grid.Row="0" Grid.Column="1" Margin="5,5,5,5" Grid.ColumnSpan="2" 
+                  ItemsSource="{Binding Documentos}"
+                  SelectedItem="{Binding TipoDocumento}"
+                  IsEditable="False"
+                  IsReadOnly="True"/>
+
+        <!-- Etiqueta y campo para Num Doc-->
+        <TextBlock Text="Número Documento" Grid.Row="1" Grid.Column="0" Margin="5,0,5,0" VerticalAlignment="Center"/>
+        <TextBox Name="DocumentoTextBox" Grid.Row="1" Grid.Column="1" Margin="5,5,5,5" Grid.ColumnSpan="2"/>
+
+        <!-- Etiqueta y campo para el Turno-->
+        <TextBlock Text="Placa" Grid.Row="2" Grid.Column="0" Margin="5,0,5,0" VerticalAlignment="Center"/>
+        <TextBox Name="PlacaTextBox" Grid.Row="2" Grid.Column="1" Margin="5,5,5,5" Grid.ColumnSpan="2"/>
+
+        <!-- Etiqueta y campo para Nombre Conductor -->
+        <TextBlock Text="Nombre conductor" Grid.Row="3" Grid.Column="0" Margin="5,0,5,0" VerticalAlignment="Center"/>
+        <TextBox Name="NombreTextBox" Grid.Row="3" Grid.Column="1" Margin="5,5,5,5" Grid.ColumnSpan="2"/>
+
+        <!-- Etiqueta y campo para el Nombre cliente-->
+        <TextBlock Text="Apellido conductor" Grid.Row="4" Grid.Column="0" Margin="5,0,5,0" VerticalAlignment="Center"/>
+        <TextBox Name="ApellidoTextBox" Grid.Row="4" Grid.Column="1" Margin="5,5,5,5" Grid.ColumnSpan="2"/>
+
+        <!-- Etiqueta y campo para Fecha -->
+        <TextBlock Text="Fecha" Grid.Row="5" Grid.Column="0" Margin="5,0,5,0" VerticalAlignment="Center"/>
+        <DatePicker Name="FechaDatePicker" Grid.Row="5" Grid.Column="1" Margin="5,5,5,5" Grid.ColumnSpan="2"/>
+
+        <!-- Etiqueta y campo para Hora -->
+        <TextBlock Text="Hora" Grid.Row="6" Grid.Column="0" Margin="5,0,5,0" VerticalAlignment="Center"/>
+        <TextBox Name="HoraTextBox" Grid.Row="6" Grid.Column="1" Margin="5,5,5,5" Text="00:00" Grid.ColumnSpan="2"/>
+
+        <!-- Etiqueta y campo para Peso de Ingreso-->
+        <TextBlock Text="Peso de Ingreso" Grid.Row="7" Grid.Column="0" Margin="5,0,5,0" VerticalAlignment="Center"/>
+        <TextBox Name="Peso_de_IngresoTextBox" Grid.Row="7" Grid.Column="1" Margin="5,5,5,5" Grid.ColumnSpan="2"/>
+
+        <!-- Botón para Guardar y Cancelar -->
+        <StackPanel Orientation="Horizontal" Grid.Row="8" HorizontalAlignment="Left" Margin="196,10,0,10" Grid.Column="1">
+            <Button Content="Guardar" Width="75" Margin="5" Click="GuardarButton_Click"/>
+            <Button Content="Cancelar" Width="75" Margin="5" Click="CancelarButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
