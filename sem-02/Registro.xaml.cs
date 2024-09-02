@@ -28,7 +28,7 @@ namespace sem_02
             InitializeComponent();
             DataContext = this; // Establece el contexto de datos para la ventana
 
-            // Inicializa la colección de tipos de documentos
+            // Inicializa la colección de tipos de documentos:
             Documentos = new ObservableCollection<string>
             {
                 "DNI",
