@@ -36,7 +36,7 @@ namespace sem_02
                 "Carnet de extranjería"
             };
 
-            // Configura la fecha y hora actuales
+            // Configura la fecha y hora actuales:
             FechaDatePicker.SelectedDate = DateTime.Today;
             HoraTextBox.Text = DateTime.Now.ToString("HH:mm");
         }
